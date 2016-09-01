@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.daveayan:gherkinsalad.core:2.6-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/daveayan/gherkinsalad.core/2.6-SNAPSHOT/gherkinsalad.core-2.6-20130831.093245-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/daveayan/gherkinsalad.core/2.6-SNAPSHOT/gherkinsalad.core-2.6-20130831.093245-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/daveayan/gherkinsalad.core/2.6-SNAPSHOT/gherkinsalad.core-2.6-20130831.093245-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
