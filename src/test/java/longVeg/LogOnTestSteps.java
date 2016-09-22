@@ -25,6 +25,7 @@ public class LogOnTestSteps {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://www.google.com");
+        System.out.println(driver.getTitle());
         driver.close();
 
         //throw new PendingException();
