@@ -1,5 +1,6 @@
 package longVeg;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -9,6 +10,8 @@ import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
  * Created by Mike on 22-Aug-16.
@@ -22,7 +25,19 @@ public class LogOnTestSteps {
     public void the_system_is_available_for_use() throws Throwable {
 
         System.setProperty("webdriver.chrome.driver", "C:\\Saltech\\ATF\\src\\test\\resources\\SeleniumDriver\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());
+
+
+        //options for chrome driver - not linked to selenium grid
+      /*  ChromeOptions options = new ChromeOptions();
+        options.addArguments("test-type");
+        capabilities.setCapability("chrome.binary", "<Path to binary>");
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        webDriver = new ChromeDriver(capabilities);
+
+      */
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://www.google.com");
         System.out.println(driver.getTitle());
